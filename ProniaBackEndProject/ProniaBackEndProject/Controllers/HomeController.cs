@@ -1,32 +1,36 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using ProniaBackEndProject.Models;
-using System.Diagnostics;
+using ProniaBackEndProject.Data;
+using ProniaBackEndProject.Model;
+using ProniaBackEndProject.Services.Interfaces;
+using ProniaBackEndProject.ViewModels;
 
 namespace ProniaBackEndProject.Controllers
 {
+    
     public class HomeController : Controller
     {
-        private readonly ILogger<HomeController> _logger;
 
-        public HomeController(ILogger<HomeController> logger)
+        private readonly ISliderService _sliderService;
+        private readonly AppDbContext _context;
+        public HomeController(ISliderService sliderService,
+                              AppDbContext context)
         {
-            _logger = logger;
+            _sliderService = sliderService; 
+            _context = context;
         }
 
-        public IActionResult Index()
+        public async Task<IActionResult> Index()
         {
-            return View();
+            IEnumerable<Slider> sliders = await _sliderService.GetAll();
+
+            HomeVM model = new()
+            {
+                Sliders = sliders
+            };
+
+            return View(model);
         }
 
-        public IActionResult Privacy()
-        {
-            return View();
-        }
-
-        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-        public IActionResult Error()
-        {
-            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
-        }
+    
     }
 }
