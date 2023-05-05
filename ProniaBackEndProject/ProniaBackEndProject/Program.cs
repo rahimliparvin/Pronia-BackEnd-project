@@ -17,7 +17,10 @@ builder.Services.AddDbContext<AppDbContext>(option =>
 
 
 builder.Services.AddScoped<ISliderService, SliderService>();
-
+builder.Services.AddScoped<IAdvertisingService, AdvertisingService>();
+builder.Services.AddScoped<IClientService, ClientService>();
+builder.Services.AddScoped<IBrandService, BrandService>();
+builder.Services.AddScoped<IBlogService, BlogService>();
 
 
 var app = builder.Build();

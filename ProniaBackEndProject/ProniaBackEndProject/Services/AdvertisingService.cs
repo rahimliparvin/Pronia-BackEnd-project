@@ -5,14 +5,14 @@ using ProniaBackEndProject.Services.Interfaces;
 
 namespace ProniaBackEndProject.Services
 {
-    public class SliderService : ISliderService
+    public class AdvertisingService : IAdvertisingService
     {
         private readonly AppDbContext _context;
-        public SliderService(AppDbContext context)
+        public AdvertisingService(AppDbContext context)
         {
             _context = context;
         }
-        public async Task<IEnumerable<Slider>> GetAllAsync() => await _context.Sliders.Where(m => !m.SoftDelete).ToListAsync();
+        public async Task<IEnumerable<Advertising>> GetAllAsync() =>  await _context.Advertisings.Where(m => !m.SoftDelete).ToListAsync();
 
     }
 }

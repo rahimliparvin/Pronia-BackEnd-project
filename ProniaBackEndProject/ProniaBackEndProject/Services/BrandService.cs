@@ -5,14 +5,17 @@ using ProniaBackEndProject.Services.Interfaces;
 
 namespace ProniaBackEndProject.Services
 {
-    public class SliderService : ISliderService
+    public class BrandService : IBrandService
     {
         private readonly AppDbContext _context;
-        public SliderService(AppDbContext context)
+        public BrandService(AppDbContext context)
         {
             _context = context;
         }
-        public async Task<IEnumerable<Slider>> GetAllAsync() => await _context.Sliders.Where(m => !m.SoftDelete).ToListAsync();
+        public async Task<IEnumerable<Brands>> GetAllAsync() => await _context.Brands.ToListAsync();
 
+
+        public async Task<Brands> GetByIdAsync(int id) => await _context.Brands.FindAsync(id);
+       
     }
 }

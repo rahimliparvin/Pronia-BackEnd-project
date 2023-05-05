@@ -2,9 +2,9 @@
 
 namespace ProniaBackEndProject.Services.Interfaces
 {
-    public interface ISliderService
+    public interface IAdvertisingService
     {
-        Task<IEnumerable<Slider>> GetAllAsync();
-      
+        Task<IEnumerable<Advertising>> GetAllAsync();
+
     }
 }
