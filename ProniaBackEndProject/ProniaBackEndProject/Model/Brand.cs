@@ -1,6 +1,6 @@
 ﻿namespace ProniaBackEndProject.Model
 {
-    public class Brands : BaseEntity
+    public class Brand : BaseEntity
     {
         public string Image { get; set; }
     }

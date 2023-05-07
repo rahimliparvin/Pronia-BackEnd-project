@@ -48,61 +48,18 @@
         </div>
     </div>
 
-    <!-- Begin Shipping Area -->
-    <div class="shipping-area section-space-y-axis-100">
-        <div class="container">
-            <div class="shipping-bg">
-                <div class="row shipping-wrap">
-                    <div class="col-lg-4 col-md-6">
-                        <div class="shipping-item">
-                            <div class="shipping-img">
-                                <img src="~/assets/images/website-images/car.png"
-                                     alt="Shipping Icon" />
-                            </div>
-                            <div class="shipping-content">
-                                <h2 class="title">Free Shipping</h2>
-                                <p class="short-desc mb-0">Capped at $319 per order</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 mt-4 mt-md-0">
-                        <div class="shipping-item">
-                            <div class="shipping-img">
-                                <img src="~/assets/images/website-images/card.png"
-                                     alt="Shipping Icon" />
-                            </div>
-                            <div class="shipping-content">
-                                <h2 class="title">Safe Payment</h2>
-                                <p class="short-desc mb-0">With our payment gateway</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 mt-4 mt-lg-0">
-                        <div class="shipping-item">
-                            <div class="shipping-img">
-                                <img src="~/assets/images/website-images/service.png"
-                                     alt="Shipping Icon" />
-                            </div>
-                            <div class="shipping-content">
-                                <h2 class="title">Best Services</h2>
-                                <p class="short-desc mb-0">Friendly & Supper Services</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Shipping Area End Here -->
+
+    @await Component.InvokeAsync("Advertising")
+  
     <!-- Begin Banner Area -->
     <div class="banner-with-counter">
         <div class="banner-area">
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-12">
+                    <div class="col-lg-12 mt-5">
                         <div class="banner-boxshadow">
                             <div class="banner-item"
-                                 data-bg-image="~/assets/images/banner/3-1-1208x542.jpg">
+                                 data-bg-image="assets/images/banner/3-1-1208x542.jpg">
                                 <div class="popup-btn">
                                     <a class="popup-vimeo wave-btn"
                                        href="https://player.vimeo.com/video/172601404?autoplay=1">
@@ -170,7 +127,7 @@
     <!-- Banner Area End Here -->
 
     <div class="team-area section-space-top-100">
-        <div class="container">
+        <div class="container" style="margin-bottom:110px">
             <div class="section-title-wrap without-tab">
                 <h2 class="section-title">Our Team</h2>
                 <p class="section-desc">
@@ -234,7 +191,7 @@
                 <div class="col-lg-3 col-sm-6 pt-5 pt-sm-0">
                     <div class="team-item">
                         <div class="team-img">
-                            <img src="~/assets/images/website-images/about/team/1-2-270x270.png"
+                            <img src="assets/images/website-images/about/team/1-2-270x270.png"
                                  alt="Team Member" />
                             <div class="inner-content">
                                 <h2 class="team-member-name">Kari Rasmus</h2>
@@ -392,51 +349,7 @@
     </div>
 
     <!-- Begin Brand Area -->
-    <div class="brand-area section-space-y-axis-100">
-        <div class="container">
-            <div class="brand-bg"
-                 data-bg-image="~/assets/images/website-images//1-1170x300.jpg">
-                <div class="row">
-                    <div class="col-lg-12">
-                        <div class="swiper-container brand-slider">
-                            <div class="swiper-wrapper">
-                                <div class="swiper-slide">
-                                    <a class="brand-item" href="#">
-                                        <img src="~/assets/images/website-images/brand/1-1.png"
-                                             alt="Brand Image" />
-                                    </a>
-                                </div>
-                                <div class="swiper-slide">
-                                    <a class="brand-item" href="#">
-                                        <img src="~/assets/images/website-images/brand/1-2.png"
-                                             alt="Brand Image" />
-                                    </a>
-                                </div>
-                                <div class="swiper-slide">
-                                    <a class="brand-item" href="#">
-                                        <img src="~/assets/images/website-images/brand/1-3.png"
-                                             alt="Brand Image" />
-                                    </a>
-                                </div>
-                                <div class="swiper-slide">
-                                    <a class="brand-item" href="#">
-                                        <img src="~/assets/images/website-images/brand/1-4.png"
-                                             alt="Brand Image" />
-                                    </a>
-                                </div>
-                                <div class="swiper-slide">
-                                    <a class="brand-item" href="#">
-                                        <img src="~/assets/images/website-images/brand/1-5.png"
-                                             alt="Brand Image" />
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+     @await Component.InvokeAsync("Brand")
     <!-- Brand Area End Here -->
 </main>
 

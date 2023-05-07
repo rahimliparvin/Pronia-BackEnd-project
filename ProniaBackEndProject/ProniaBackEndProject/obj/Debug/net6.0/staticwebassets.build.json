@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "eKI78muFgIm6QQDl7AUNBN3nJy8WqicwXszV5gTw60U=",
+  "Hash": "0MG3hqBusvgXtNA9sVkSyDHFNDW83ghk4/c3lXq26rI=",
   "Source": "ProniaBackEndProject",
   "BasePath": "_content/ProniaBackEndProject",
   "Mode": "Default",
@@ -2803,6 +2803,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\assets\\images\\website-images\\service.png"
+    },
+    {
+      "Identity": "C:\\Users\\CASPER\\Desktop\\ProniaBackendProject\\ProniaBackEndProject\\ProniaBackEndProject\\wwwroot\\assets\\js\\admin.js",
+      "SourceId": "ProniaBackEndProject",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\CASPER\\Desktop\\ProniaBackendProject\\ProniaBackEndProject\\ProniaBackEndProject\\wwwroot\\",
+      "BasePath": "_content/ProniaBackEndProject",
+      "RelativePath": "assets/js/admin.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\js\\admin.js"
     },
     {
       "Identity": "C:\\Users\\CASPER\\Desktop\\ProniaBackendProject\\ProniaBackEndProject\\ProniaBackEndProject\\wwwroot\\assets\\js\\main.js",

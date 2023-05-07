@@ -38,7 +38,7 @@ namespace ProniaBackEndProject.Controllers
             IEnumerable<Slider> sliders = await _sliderService.GetAllAsync();
             IEnumerable<Advertising> advertisings = await _advertisingService.GetAllAsync();
             IEnumerable<Client> clients = await _clientService.GetAllAsync();
-            IEnumerable<Brands> brands = await _brandService.GetAllAsync();
+            IEnumerable<Brand> brands = await _brandService.GetAllAsync();
             IEnumerable<Blog> blogs = await _blogService.GetAllAsync();
 
             HomeVM model = new()
