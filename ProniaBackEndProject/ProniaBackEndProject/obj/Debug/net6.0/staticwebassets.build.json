@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "0MG3hqBusvgXtNA9sVkSyDHFNDW83ghk4/c3lXq26rI=",
+  "Hash": "7Rxlz7nyRirafDEFqzlPYNcIfjsCz43Add63NJdKozE=",
   "Source": "ProniaBackEndProject",
   "BasePath": "_content/ProniaBackEndProject",
   "Mode": "Default",
@@ -2805,23 +2805,6 @@
       "OriginalItemSpec": "wwwroot\\assets\\images\\website-images\\service.png"
     },
     {
-      "Identity": "C:\\Users\\CASPER\\Desktop\\ProniaBackendProject\\ProniaBackEndProject\\ProniaBackEndProject\\wwwroot\\assets\\js\\admin.js",
-      "SourceId": "ProniaBackEndProject",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\CASPER\\Desktop\\ProniaBackendProject\\ProniaBackEndProject\\ProniaBackEndProject\\wwwroot\\",
-      "BasePath": "_content/ProniaBackEndProject",
-      "RelativePath": "assets/js/admin.js",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\assets\\js\\admin.js"
-    },
-    {
       "Identity": "C:\\Users\\CASPER\\Desktop\\ProniaBackendProject\\ProniaBackEndProject\\ProniaBackEndProject\\wwwroot\\assets\\js\\main.js",
       "SourceId": "ProniaBackEndProject",
       "SourceType": "Discovered",
@@ -3007,6 +2990,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\assets\\js\\plugins\\wow.min.js"
+    },
+    {
+      "Identity": "C:\\Users\\CASPER\\Desktop\\ProniaBackendProject\\ProniaBackEndProject\\ProniaBackEndProject\\wwwroot\\assets\\js\\product.js",
+      "SourceId": "ProniaBackEndProject",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\CASPER\\Desktop\\ProniaBackendProject\\ProniaBackEndProject\\ProniaBackEndProject\\wwwroot\\",
+      "BasePath": "_content/ProniaBackEndProject",
+      "RelativePath": "assets/js/product.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\js\\product.js"
     },
     {
       "Identity": "C:\\Users\\CASPER\\Desktop\\ProniaBackendProject\\ProniaBackEndProject\\ProniaBackEndProject\\wwwroot\\assets\\js\\vendor\\bootstrap.bundle.min.js",

@@ -16,6 +16,7 @@ namespace ProniaBackEndProject.Controllers
         private readonly IClientService _clientService;
         private readonly IBrandService _brandService;
         private readonly IBlogService _blogService;
+        private readonly IProductService _productService;
        
         
         public HomeController(ISliderService sliderService,
@@ -23,6 +24,7 @@ namespace ProniaBackEndProject.Controllers
                               IClientService clientService,
                               IBrandService brandService,
                               IBlogService blogService,
+                              IProductService productService,
                               AppDbContext context)
         {
             _context = context;
@@ -31,6 +33,7 @@ namespace ProniaBackEndProject.Controllers
             _clientService = clientService;
             _brandService = brandService;
             _blogService = blogService;
+            _productService = productService;
         }
 
         public async Task<IActionResult> Index()
@@ -40,6 +43,7 @@ namespace ProniaBackEndProject.Controllers
             IEnumerable<Client> clients = await _clientService.GetAllAsync();
             IEnumerable<Brand> brands = await _brandService.GetAllAsync();
             IEnumerable<Blog> blogs = await _blogService.GetAllAsync();
+            IEnumerable<Product> products = await _productService.GetAllAsync();
 
             HomeVM model = new()
             {
@@ -47,8 +51,8 @@ namespace ProniaBackEndProject.Controllers
                 Advertising = advertisings,
                 Clients = clients,
                 Brands = brands,
-                Blogs = blogs
-                
+                Blogs = blogs,
+                Products = products
                 
             };
 
