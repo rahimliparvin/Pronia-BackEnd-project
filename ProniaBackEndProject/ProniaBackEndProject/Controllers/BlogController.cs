@@ -60,7 +60,8 @@ namespace ProniaBackEndProject.Controllers
                 Title = blog.Title,
                 Description = blog.Description,
                 BlogImages = blog.Images,
-                AuthorName = blog.Author.Name
+                AuthorName = blog.Author.Name,
+                Created = blog.Created
                 
             };
 

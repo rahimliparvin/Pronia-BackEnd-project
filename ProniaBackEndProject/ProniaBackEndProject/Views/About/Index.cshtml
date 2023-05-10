@@ -1,4 +1,4 @@
-﻿
+﻿@model AboutVM
 @{
     ViewData["Title"] = "Index";
 }
@@ -124,6 +124,7 @@
             </div>
         </div>
     </div>
+    </div>
     <!-- Banner Area End Here -->
 
     <div class="team-area section-space-top-100">
@@ -136,214 +137,63 @@
                 </p>
             </div>
             <div class="row">
-                <div class="col-lg-3 col-sm-6 pt-sm-5">
-                    <div class="team-item">
-                        <div class="team-img">
-                            <img src="~/assets/images/website-images/about/team/1-1-270x270.png"
+              
+                @foreach (var team in Model.Teams)
+                {
+                    <div class="col-lg-3 col-sm-6 pt-sm-5">
+                        <div class="team-item">
+                            <div class="team-img">
+                                <img src="~/assets/images/website-images/about/team/@team.Image"
                                  alt="Team Member" />
-                            <div class="inner-content">
-                                <h2 class="team-member-name">Micheal Murphy</h2>
-                                <span class="occupation">Sales man</span>
-                                <div class="social-link with-border">
-                                    <ul>
-                                        <li>
-                                            <a href="#"
+                                <div class="inner-content">
+                                    <h2 class="team-member-name">@team.Name</h2>
+                                    <span class="occupation">@team.</span>
+                                    <div class="social-link with-border">
+                                        <ul>
+                                            <li>
+                                                <a href="#"
                                                data-tippy="Facebook"
                                                data-tippy-inertia="true"
                                                data-tippy-animation="shift-away"
                                                data-tippy-delay="50"
                                                data-tippy-arrow="true"
                                                data-tippy-theme="sharpborder">
-                                                <i class="fa fa-facebook"></i>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#"
+                                                    <i class="fa fa-facebook"></i>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#"
                                                data-tippy="Twitter"
                                                data-tippy-inertia="true"
                                                data-tippy-animation="shift-away"
                                                data-tippy-delay="50"
                                                data-tippy-arrow="true"
                                                data-tippy-theme="sharpborder">
-                                                <i class="fa fa-twitter"></i>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#"
+                                                    <i class="fa fa-twitter"></i>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#"
                                                data-tippy="Pinterest"
                                                data-tippy-inertia="true"
                                                data-tippy-animation="shift-away"
                                                data-tippy-delay="50"
                                                data-tippy-arrow="true"
                                                data-tippy-theme="sharpborder">
-                                                <i class="fa fa-pinterest"></i>
-                                            </a>
-                                        </li>
-                                    </ul>
+                                                    <i class="fa fa-pinterest"></i>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="team-content">
-                            <h2 class="team-member-name mb-0">Micheal Murphy</h2>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-sm-6 pt-5 pt-sm-0">
-                    <div class="team-item">
-                        <div class="team-img">
-                            <img src="assets/images/website-images/about/team/1-2-270x270.png"
-                                 alt="Team Member" />
-                            <div class="inner-content">
-                                <h2 class="team-member-name">Kari Rasmus</h2>
-                                <span class="occupation">Sales man</span>
-                                <div class="social-link with-border">
-                                    <ul>
-                                        <li>
-                                            <a href="#"
-                                               data-tippy="Facebook"
-                                               data-tippy-inertia="true"
-                                               data-tippy-animation="shift-away"
-                                               data-tippy-delay="50"
-                                               data-tippy-arrow="true"
-                                               data-tippy-theme="sharpborder">
-                                                <i class="fa fa-facebook"></i>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#"
-                                               data-tippy="Twitter"
-                                               data-tippy-inertia="true"
-                                               data-tippy-animation="shift-away"
-                                               data-tippy-delay="50"
-                                               data-tippy-arrow="true"
-                                               data-tippy-theme="sharpborder">
-                                                <i class="fa fa-twitter"></i>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#"
-                                               data-tippy="Pinterest"
-                                               data-tippy-inertia="true"
-                                               data-tippy-animation="shift-away"
-                                               data-tippy-delay="50"
-                                               data-tippy-arrow="true"
-                                               data-tippy-theme="sharpborder">
-                                                <i class="fa fa-pinterest"></i>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
+                            <div class="team-content">
+                                <h2 class="team-member-name mb-0">@team.Name</h2>
                             </div>
                         </div>
-                        <div class="team-content">
-                            <h2 class="team-member-name mb-0">Kari Rasmus</h2>
-                        </div>
                     </div>
-                </div>
-                <div class="col-lg-3 col-sm-6 pt-5">
-                    <div class="team-item">
-                        <div class="team-img">
-                            <img src="~/assets/images/website-images/about/team/1-3-270x270.png"
-                                 alt="Team Member" />
-                            <div class="inner-content">
-                                <h2 class="team-member-name">Britney Cooper</h2>
-                                <span class="occupation">Sales man</span>
-                                <div class="social-link with-border">
-                                    <ul>
-                                        <li>
-                                            <a href="#"
-                                               data-tippy="Facebook"
-                                               data-tippy-inertia="true"
-                                               data-tippy-animation="shift-away"
-                                               data-tippy-delay="50"
-                                               data-tippy-arrow="true"
-                                               data-tippy-theme="sharpborder">
-                                                <i class="fa fa-facebook"></i>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#"
-                                               data-tippy="Twitter"
-                                               data-tippy-inertia="true"
-                                               data-tippy-animation="shift-away"
-                                               data-tippy-delay="50"
-                                               data-tippy-arrow="true"
-                                               data-tippy-theme="sharpborder">
-                                                <i class="fa fa-twitter"></i>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#"
-                                               data-tippy="Pinterest"
-                                               data-tippy-inertia="true"
-                                               data-tippy-animation="shift-away"
-                                               data-tippy-delay="50"
-                                               data-tippy-arrow="true"
-                                               data-tippy-theme="sharpborder">
-                                                <i class="fa fa-pinterest"></i>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="team-content">
-                            <h2 class="team-member-name mb-0">Britney Cooper</h2>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-sm-6 pt-5 pt-sm-0">
-                    <div class="team-item">
-                        <div class="team-img">
-                            <img src="~/assets/images/website-images/about/team/1-4-270x270.png"
-                                 alt="Team Member" />
-                            <div class="inner-content">
-                                <h2 class="team-member-name">Marissa Swan</h2>
-                                <span class="occupation">Sales man</span>
-                                <div class="social-link with-border">
-                                    <ul>
-                                        <li>
-                                            <a href="#"
-                                               data-tippy="Facebook"
-                                               data-tippy-inertia="true"
-                                               data-tippy-animation="shift-away"
-                                               data-tippy-delay="50"
-                                               data-tippy-arrow="true"
-                                               data-tippy-theme="sharpborder">
-                                                <i class="fa fa-facebook"></i>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#"
-                                               data-tippy="Twitter"
-                                               data-tippy-inertia="true"
-                                               data-tippy-animation="shift-away"
-                                               data-tippy-delay="50"
-                                               data-tippy-arrow="true"
-                                               data-tippy-theme="sharpborder">
-                                                <i class="fa fa-twitter"></i>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#"
-                                               data-tippy="Pinterest"
-                                               data-tippy-inertia="true"
-                                               data-tippy-animation="shift-away"
-                                               data-tippy-delay="50"
-                                               data-tippy-arrow="true"
-                                               data-tippy-theme="sharpborder">
-                                                <i class="fa fa-pinterest"></i>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="team-content">
-                            <h2 class="team-member-name mb-0">Marissa Swan</h2>
-                        </div>
-                    </div>
-                </div>
+                }
+               
             </div>
         </div>
     </div>

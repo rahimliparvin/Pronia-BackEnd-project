@@ -118,12 +118,11 @@
                                 <h2 class="widgets-title mb-4">Populer Tags</h2>
                                 <ul class="widgets-tag">
                                   
-                                    @foreach (var tag in Model.Tags)
-                                    {
+                                   
                                         <li>
-                                            <a href="#">@tag.Name</a>
+                                            <a href="#">@Model.Tags.FirstOrDefault().Name</a>
                                         </li>
-                                    }
+                                    
                                   
                                 </ul>
                             </div>
@@ -155,19 +154,9 @@
                                     <li class="date">@Model.Created.ToString("dd MMMM yyyy")</li>
                                 </ul>
                             </div>
-                            <h2 class="title">There Many Variations</h2>
+                            <h2 class="title">@Model.Title</h2>
                             <p class="short-desc">
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-                                sed do eiusmod tempor incididunt ut labore etl dolore
-                                magna aliqua. Ut enim ad minim veniam, quis nostrud
-                                exercitation ullamco laboris nisi ut aliquiex ea commodo
-                                consequat. Duis aute irure dolor in reprehenderit in
-                                voluptate velit esse cillum dolore eukip fugiat nulla
-                                pariatur. Excepteur sint occaecat cupidatat non proident,
-                                sunt in culpa qui officia deseruntk mollit anim id est
-                                laborum. Sed ut perspiciatis unde omnis iste natus error
-                                sit voluptatem accusantiumy doloremque laudantium, totam
-                                rem aperiam,
+                               @Model.Description
                             </p>
                         </div>
                         <div class="blog-img img-hover-effect">
