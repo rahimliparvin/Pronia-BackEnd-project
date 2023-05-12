@@ -6,5 +6,6 @@ namespace ProniaBackEndProject.Services.Interfaces
     {
         Task<IEnumerable<Advertising>> GetAllAsync();
 
+        Task<Advertising> GetFullDataByIdAsync(int id);
     }
 }

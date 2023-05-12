@@ -14,5 +14,7 @@ namespace ProniaBackEndProject.Services
         }
         public async Task<IEnumerable<Advertising>> GetAllAsync() =>  await _context.Advertisings.Where(m => !m.SoftDelete).ToListAsync();
 
+        public async Task<Advertising> GetFullDataByIdAsync(int id) => await _context.Advertisings.FindAsync(id);
+        
     }
 }
