@@ -16,6 +16,8 @@ namespace ProniaBackEndProject.Services
                                                                                    ThenInclude(m=>m.Product).
                                                                                    Where(m=>!m.SoftDelete). 
                                                                                    ToListAsync();
-        
+
+        public async Task<Size> GetByIdAsync(int id) => await _context.Sizes.FindAsync(id);
+       
     }
 }

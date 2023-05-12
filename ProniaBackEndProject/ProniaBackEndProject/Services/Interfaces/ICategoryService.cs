@@ -6,6 +6,7 @@ namespace ProniaBackEndProject.Services.Interfaces
     {
         Task<IEnumerable<Category>> GetAllAsync();
         Task<Category> GetByIdAsync(int id);
+
    
     }
 }

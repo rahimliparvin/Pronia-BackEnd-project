@@ -14,6 +14,8 @@ namespace ProniaBackEndProject.Services
         }
 
         public async Task<IEnumerable<Tag>> GetAllAsync() => await _context.Tags.Where(m => !m.SoftDelete).ToListAsync();
-      
+
+        public async Task<Tag> GetByIdAsync(int id) => await _context.Tags.FindAsync(id);
+        
     }
 }

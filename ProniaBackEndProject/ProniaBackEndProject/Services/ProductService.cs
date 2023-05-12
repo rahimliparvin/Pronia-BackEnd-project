@@ -14,10 +14,14 @@ namespace ProniaBackEndProject.Services
         }
         public async Task<IEnumerable<Product>> GetAllAsync() => await _context.Products.Include(m => m.ProductImages).
                                                                                          Include(m => m.ProductCategories).
+                                                                                         ThenInclude(m=>m.Category).
                                                                                          Include(m => m.ProductTags).
-                                                                                         Include(m => m.ProductColors).
-                                                                                         Include(m => m.ProductSizes).
-                                                                                         ToListAsync();
+																					     ThenInclude(m => m.Tag).
+																						 Include(m => m.ProductColors).
+						                                                                 ThenInclude(m => m.Color).
+																						 Include(m => m.ProductSizes).
+																						 ThenInclude(m => m.Size).
+																						 ToListAsync();
 
         public async Task<List<Product>> GetPaginationDatas(int page, int take) => await _context.Products.Include(m => m.ProductImages).  
                                                                                                            Skip((page * take) - take).  

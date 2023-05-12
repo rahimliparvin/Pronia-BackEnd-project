@@ -166,6 +166,7 @@
 
 				<nav id="app-nav-main" class="app-nav app-nav-main flex-grow-1">
 					<ul class="app-menu list-unstyled accordion" id="menu-accordion">
+						@*DASHBOARD*@
 						<li class="nav-item">
 							<!--//Bootstrap Icons: https://icons.getbootstrap.com/ -->
 							<a class="nav-link active" asp-area="Admin" asp-controller="Dashboard" asp-action="Index">
@@ -179,6 +180,7 @@
 								<span class="nav-link-text">Dashboard</span>
 							</a><!--//nav-link-->
 						</li><!--//nav-item-->
+						@*SLIDER*@
 						<li class="nav-item">
 							<!--//Bootstrap Icons: https://icons.getbootstrap.com/ -->
 							<a class="nav-link" asp-controller="Slider" asp-action="Index">
@@ -191,6 +193,7 @@
 								<span class="nav-link-text">Slider</span>
 							</a><!--//nav-link-->
 						</li><!--//nav-item-->
+						@*ADVERTISING*@
 						<li class="nav-item">
 							<!--//Bootstrap Icons: https://icons.getbootstrap.com/ -->
 							<a class="nav-link" asp-area="Admin" asp-controller="Advertising" asp-action="Index">
@@ -206,6 +209,39 @@
 								<span class="nav-link-text">Advertising</span>
 							</a><!--//nav-link-->
 						</li><!--//nav-item-->
+						@*AUTHOR*@
+						<li class="nav-item">
+							<!--//Bootstrap Icons: https://icons.getbootstrap.com/ -->
+							<a class="nav-link" asp-area="Admin" asp-controller="Author" asp-action="Index">
+								<span class="nav-icon">
+									<svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-card-list" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+										<path fill-rule="evenodd" d="M14.5 3h-13a.5.5 0 0 0-.5.5v9a.5.5 0 0 0 .5.5h13a.5.5 0 0 0 .5-.5v-9a.5.5 0 0 0-.5-.5zm-13-1A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2h-13z" />
+										<path fill-rule="evenodd" d="M5 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 5 8zm0-2.5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5zm0 5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5z" />
+										<circle cx="3.5" cy="5.5" r=".5" />
+										<circle cx="3.5" cy="8" r=".5" />
+										<circle cx="3.5" cy="10.5" r=".5" />
+									</svg>
+								</span>
+								<span class="nav-link-text">Author</span>
+							</a><!--//nav-link-->
+						</li><!--//nav-item-->
+						@*Category*@
+						<li class="nav-item">
+							<!--//Bootstrap Icons: https://icons.getbootstrap.com/ -->
+							<a class="nav-link" asp-area="Admin" asp-controller="Category" asp-action="Index">
+								<span class="nav-icon">
+									<svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-card-list" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+										<path fill-rule="evenodd" d="M14.5 3h-13a.5.5 0 0 0-.5.5v9a.5.5 0 0 0 .5.5h13a.5.5 0 0 0 .5-.5v-9a.5.5 0 0 0-.5-.5zm-13-1A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2h-13z" />
+										<path fill-rule="evenodd" d="M5 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 5 8zm0-2.5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5zm0 5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5z" />
+										<circle cx="3.5" cy="5.5" r=".5" />
+										<circle cx="3.5" cy="8" r=".5" />
+										<circle cx="3.5" cy="10.5" r=".5" />
+									</svg>
+								</span>
+								<span class="nav-link-text">Category</span>
+							</a><!--//nav-link-->
+						</li><!--//nav-item-->
+						@*Client*@
 						<li class="nav-item">
 							<!--//Bootstrap Icons: https://icons.getbootstrap.com/ -->
 							<a class="nav-link" asp-area="Admin" asp-controller="Client" asp-action="Index">
@@ -221,7 +257,54 @@
 								<span class="nav-link-text">Client</span>
 							</a><!--//nav-link-->
 						</li><!--//nav-item-->
-					
+					    @*Color*@
+						<li class="nav-item">
+							<!--//Bootstrap Icons: https://icons.getbootstrap.com/ -->
+							<a class="nav-link" asp-area="Admin" asp-controller="Color" asp-action="Index">
+								<span class="nav-icon">
+									<svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-card-list" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+										<path fill-rule="evenodd" d="M14.5 3h-13a.5.5 0 0 0-.5.5v9a.5.5 0 0 0 .5.5h13a.5.5 0 0 0 .5-.5v-9a.5.5 0 0 0-.5-.5zm-13-1A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2h-13z" />
+										<path fill-rule="evenodd" d="M5 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 5 8zm0-2.5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5zm0 5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5z" />
+										<circle cx="3.5" cy="5.5" r=".5" />
+										<circle cx="3.5" cy="8" r=".5" />
+										<circle cx="3.5" cy="10.5" r=".5" />
+									</svg>
+								</span>
+								<span class="nav-link-text">Color</span>
+							</a><!--//nav-link-->
+						</li><!--//nav-item-->
+						@*Size*@
+						<li class="nav-item">
+							<!--//Bootstrap Icons: https://icons.getbootstrap.com/ -->
+							<a class="nav-link" asp-area="Admin" asp-controller="Size" asp-action="Index">
+								<span class="nav-icon">
+									<svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-card-list" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+										<path fill-rule="evenodd" d="M14.5 3h-13a.5.5 0 0 0-.5.5v9a.5.5 0 0 0 .5.5h13a.5.5 0 0 0 .5-.5v-9a.5.5 0 0 0-.5-.5zm-13-1A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2h-13z" />
+										<path fill-rule="evenodd" d="M5 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 5 8zm0-2.5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5zm0 5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5z" />
+										<circle cx="3.5" cy="5.5" r=".5" />
+										<circle cx="3.5" cy="8" r=".5" />
+										<circle cx="3.5" cy="10.5" r=".5" />
+									</svg>
+								</span>
+								<span class="nav-link-text">Size</span>
+							</a><!--//nav-link-->
+						</li><!--//nav-item-->
+						@*Tag*@
+						<li class="nav-item">
+							<!--//Bootstrap Icons: https://icons.getbootstrap.com/ -->
+							<a class="nav-link" asp-area="Admin" asp-controller="Tag" asp-action="Index">
+								<span class="nav-icon">
+									<svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-card-list" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+										<path fill-rule="evenodd" d="M14.5 3h-13a.5.5 0 0 0-.5.5v9a.5.5 0 0 0 .5.5h13a.5.5 0 0 0 .5-.5v-9a.5.5 0 0 0-.5-.5zm-13-1A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2h-13z" />
+										<path fill-rule="evenodd" d="M5 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 5 8zm0-2.5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5zm0 5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5z" />
+										<circle cx="3.5" cy="5.5" r=".5" />
+										<circle cx="3.5" cy="8" r=".5" />
+										<circle cx="3.5" cy="10.5" r=".5" />
+									</svg>
+								</span>
+								<span class="nav-link-text">Tag</span>
+							</a><!--//nav-link-->
+						</li><!--//nav-item-->
 						<li class="nav-item has-submenu">
 							<!--//Bootstrap Icons: https://icons.getbootstrap.com/ -->
 							<a class="nav-link submenu-toggle" href="#" data-bs-toggle="collapse" data-bs-target="#submenu-1" aria-expanded="false" aria-controls="submenu-1">

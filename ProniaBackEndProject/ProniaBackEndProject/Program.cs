@@ -63,6 +63,7 @@ builder.Services.AddScoped<ISizeService, SizeService>();
 builder.Services.AddScoped<ITagService, TagService>();
 builder.Services.AddScoped<IEmailService, EmailService>();
 builder.Services.AddScoped<ITeamService, TeamService>();
+builder.Services.AddScoped<IAuthorService, AuthorService>();
 
 
 var app = builder.Build();

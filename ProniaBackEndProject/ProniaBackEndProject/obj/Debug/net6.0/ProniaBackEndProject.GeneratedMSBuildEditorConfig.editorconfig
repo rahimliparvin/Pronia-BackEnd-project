@@ -32,8 +32,56 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQWR2ZXJ0aXNpbmdcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/CASPER/Desktop/ProniaBackendProject/ProniaBackEndProject/ProniaBackEndProject/Areas/Admin/Views/Author/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQXV0aG9yXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/CASPER/Desktop/ProniaBackendProject/ProniaBackEndProject/ProniaBackEndProject/Areas/Admin/Views/Author/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQXV0aG9yXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/CASPER/Desktop/ProniaBackendProject/ProniaBackEndProject/ProniaBackEndProject/Areas/Admin/Views/Author/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQXV0aG9yXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/CASPER/Desktop/ProniaBackendProject/ProniaBackEndProject/ProniaBackEndProject/Areas/Admin/Views/Category/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQ2F0ZWdvcnlcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/CASPER/Desktop/ProniaBackendProject/ProniaBackEndProject/ProniaBackEndProject/Areas/Admin/Views/Category/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQ2F0ZWdvcnlcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/CASPER/Desktop/ProniaBackendProject/ProniaBackEndProject/ProniaBackEndProject/Areas/Admin/Views/Category/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQ2F0ZWdvcnlcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/CASPER/Desktop/ProniaBackendProject/ProniaBackEndProject/ProniaBackEndProject/Areas/Admin/Views/Client/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQ2xpZW50XENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/CASPER/Desktop/ProniaBackendProject/ProniaBackEndProject/ProniaBackEndProject/Areas/Admin/Views/Client/Detail.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQ2xpZW50XERldGFpbC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/CASPER/Desktop/ProniaBackendProject/ProniaBackEndProject/ProniaBackEndProject/Areas/Admin/Views/Client/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQ2xpZW50XEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/CASPER/Desktop/ProniaBackendProject/ProniaBackEndProject/ProniaBackEndProject/Areas/Admin/Views/Client/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQ2xpZW50XEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/CASPER/Desktop/ProniaBackendProject/ProniaBackEndProject/ProniaBackEndProject/Areas/Admin/Views/Color/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQ29sb3JcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/CASPER/Desktop/ProniaBackendProject/ProniaBackEndProject/ProniaBackEndProject/Areas/Admin/Views/Color/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQ29sb3JcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/CASPER/Desktop/ProniaBackendProject/ProniaBackEndProject/ProniaBackEndProject/Areas/Admin/Views/Color/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQ29sb3JcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/CASPER/Desktop/ProniaBackendProject/ProniaBackEndProject/ProniaBackEndProject/Areas/Admin/Views/Dashboard/Index.cshtml]
@@ -42,6 +90,18 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/CASPER/Desktop/ProniaBackendProject/ProniaBackEndProject/ProniaBackEndProject/Areas/Admin/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/CASPER/Desktop/ProniaBackendProject/ProniaBackEndProject/ProniaBackEndProject/Areas/Admin/Views/Size/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2l6ZVxDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/CASPER/Desktop/ProniaBackendProject/ProniaBackEndProject/ProniaBackEndProject/Areas/Admin/Views/Size/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2l6ZVxFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/CASPER/Desktop/ProniaBackendProject/ProniaBackEndProject/ProniaBackEndProject/Areas/Admin/Views/Size/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2l6ZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/CASPER/Desktop/ProniaBackendProject/ProniaBackEndProject/ProniaBackEndProject/Areas/Admin/Views/Slider/Create.cshtml]
@@ -58,6 +118,18 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/CASPER/Desktop/ProniaBackendProject/ProniaBackEndProject/ProniaBackEndProject/Areas/Admin/Views/Slider/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2xpZGVyXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/CASPER/Desktop/ProniaBackendProject/ProniaBackEndProject/ProniaBackEndProject/Areas/Admin/Views/Tag/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcVGFnXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/CASPER/Desktop/ProniaBackendProject/ProniaBackEndProject/ProniaBackEndProject/Areas/Admin/Views/Tag/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcVGFnXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/CASPER/Desktop/ProniaBackendProject/ProniaBackEndProject/ProniaBackEndProject/Areas/Admin/Views/Tag/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcVGFnXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/CASPER/Desktop/ProniaBackendProject/ProniaBackEndProject/ProniaBackEndProject/Areas/Admin/Views/_ViewImports.cshtml]

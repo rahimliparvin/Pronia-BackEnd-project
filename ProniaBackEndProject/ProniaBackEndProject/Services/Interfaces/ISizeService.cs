@@ -5,6 +5,7 @@ namespace ProniaBackEndProject.Services.Interfaces
     public interface ISizeService
     {
         Task<IEnumerable<Size>> GetAllAsync();
+        Task<Size> GetByIdAsync(int id);
 
     }
 }
