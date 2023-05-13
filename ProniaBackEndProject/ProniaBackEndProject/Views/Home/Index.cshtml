@@ -118,10 +118,10 @@
                                     <div class="product-img">
                                         <a asp-controller="Shop" asp-action="Detail" asp-route-id="@product.Id" >
                                             <img class="primary-img"
-                                                 src="~/assets/images/website-images//@product.ProductImages?.FirstOrDefault(m=>m.IsMain).Image"
+                                                 src="~/assets/images/website-images//@product.ProductImages?.Where(m=>m.IsMain).FirstOrDefault()?.Image"
                                                  alt="Product Images" />
                                             <img class="secondary-img"
-                                                 src="~/assets/images/website-images//@product.ProductImages?.FirstOrDefault(m=>!m.IsMain).Image"
+                                                 src="~/assets/images/website-images//@product.ProductImages?.Where(m=>!m.IsMain).FirstOrDefault()?.Image"
                                                  alt="Product Images" />
                                         </a>
                                         <div class="product-add-action">
@@ -202,10 +202,10 @@
                                         <div class="product-img">
                                             <a  asp-controller="Shop" asp-action="Detail" asp-route-id="@product.Id">
                                                 <img class="primary-img"
-                                                 src="~/assets/images/website-images//@product.ProductImages?.FirstOrDefault(m=>m.IsMain).Image"
+                                                 src="~/assets/images/website-images//@product.ProductImages?.Where(m=>m.IsMain).FirstOrDefault()?.Image"
                                                  alt="Product Images" />
                                                 <img class="secondary-img"
-                                                 src="~/assets/images/website-images//@product.ProductImages?.FirstOrDefault(m=>!m.IsMain).Image"
+                                                 src="~/assets/images/website-images//@product.ProductImages?.Where(m=>!m.IsMain).FirstOrDefault()?.Image"
                                                  alt="Product Images" />
                                             </a>
                                             <div class="product-add-action">
@@ -285,10 +285,10 @@
                                         <div class="product-img">
                                             <a asp-controller="Shop" asp-action="Detail" asp-route-id="@product.Id">
                                                 <img class="primary-img"
-                                                 src="~/assets/images/website-images//@product.ProductImages?.FirstOrDefault(m=>m.IsMain).Image"
+                                                 src="~/assets/images/website-images//@product.ProductImages?.Where(m=>m.IsMain).FirstOrDefault()?.Image"
                                                  alt="Product Images" />
                                                 <img class="secondary-img"
-                                                 src="~/assets/images/website-images//@product.ProductImages?.FirstOrDefault(m=>!m.IsMain).Image"
+                                                 src="~/assets/images/website-images//@product.ProductImages?.Where(m=>!m.IsMain).FirstOrDefault()?.Image"
                                                  alt="Product Images" />
                                             </a>
                                             <div class="product-add-action">
@@ -462,10 +462,10 @@
                                 <div class="product-img">
                                     <a href="shop.html">
                                         <img class="primary-img"
-                                         src="~/assets/images/website-images//@product.ProductImages?.FirstOrDefault(m=>m.IsMain).Image"
+                                         src="~/assets/images/website-images//@product.ProductImages?.Where(m=>m.IsMain).FirstOrDefault()?.Image"
                                          alt="Product Images" />
                                         <img class="secondary-img"
-                                         src="~/assets/images/website-images//@product.ProductImages?.FirstOrDefault(m=>!m.IsMain).Image"
+                                         src="~/assets/images/website-images//@product.ProductImages?.Where(m=>!m.IsMain).FirstOrDefault()?.Image"
                                          alt="Product Images" />
                                     </a>
                                     <div class="product-add-action">
@@ -623,7 +623,7 @@
                                 <div class="blog-img img-hover-effect">
                                     <a asp-controller="Blog" asp-action="Index">
                                         <img class="img-full"
-                                             src="~/assets/images/website-images/@blog.Images.FirstOrDefault(m=>m.IsMain).Image"
+                                             src="~/assets/images/website-images/@blog.Images.Where(m=>m.IsMain).FirstOrDefault()?.Image"
                                              alt="Blog Image" />
                                     </a>
                                     <div class="inner-btn-wrap">

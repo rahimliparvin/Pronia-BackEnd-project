@@ -13,7 +13,10 @@ namespace ProniaBackEndProject.Services
             _context = context;
         }
 
-        public async Task<IEnumerable<Tag>> GetAllAsync() => await _context.Tags.Where(m => !m.SoftDelete).ToListAsync();
+        public async Task<IEnumerable<Tag>> GetAllAsync() => await _context.Tags.Where(m => !m.SoftDelete). 
+                                                                                 Include(m=>m.ProductTags).  
+                                                                                 ThenInclude(m=>m.Product).
+                                                                                 ToListAsync();
 
         public async Task<Tag> GetByIdAsync(int id) => await _context.Tags.FindAsync(id);
         

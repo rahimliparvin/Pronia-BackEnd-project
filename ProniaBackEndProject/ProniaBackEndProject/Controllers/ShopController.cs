@@ -65,7 +65,7 @@ namespace ProniaBackEndProject.Controllers
         {
             if (id == null) return BadRequest();
 
-            Product product = await _productService.GetByIdAsync(id);
+            Product product = await _productService.GetFullDataByIdAsync(id);
 
             if (product == null) return NotFound();
 

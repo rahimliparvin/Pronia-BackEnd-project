@@ -7,7 +7,7 @@ namespace ProniaBackEndProject.Services.Interfaces
     {
         Task<IEnumerable<Product>> GetAllAsync();
 
-        Task<Product> GetByIdAsync(int id);
+        Task<Product> GetFullDataByIdAsync(int id);
 
         Task<List<Product>> GetPaginationDatas(int page, int take);
 

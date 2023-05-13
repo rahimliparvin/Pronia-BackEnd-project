@@ -53,7 +53,6 @@ namespace ProniaBackEndProject.Controllers
                 Brands = brands,
                 Blogs = blogs,
                 Products = products
-                
             };
 
             return View(model);

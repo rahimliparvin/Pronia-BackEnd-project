@@ -69,7 +69,7 @@ namespace ProniaBackEndProject.Areas.Admin.Controllers
 			if (!model.Photo.CheckFileType("image/"))
 			{
 
-				ModelState.AddModelError("Photos", "File type must be image");
+				ModelState.AddModelError("Photo", "File type must be image");
 				return View();
 
 			}
@@ -78,7 +78,7 @@ namespace ProniaBackEndProject.Areas.Admin.Controllers
 			if (model.Photo.CheckFileSize(200))
 			{
 
-				ModelState.AddModelError("Photos", "Photo size must be max 200Kb");
+				ModelState.AddModelError("Photo", "Photo size must be max 200Kb");
 				return View();
 
 			}

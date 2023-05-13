@@ -1,0 +1,17 @@
+﻿using ProniaBackEndProject.Model;
+using System.ComponentModel.DataAnnotations;
+
+namespace ProniaBackEndProject.Areas.Admin.ViewModels.ProductVM
+{
+    public class ProductIndexVM
+    {
+        public int Id { get; set; }
+        public string Name { get; set; }
+
+        public decimal Price { get; set; }
+        public string CategoryName { get; set; }
+
+        public string ProductImage { get; set; }
+
+    }
+}

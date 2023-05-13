@@ -29,7 +29,7 @@ namespace ProniaBackEndProject.Services
                                                                                                            ToListAsync();
         public async Task<int> GetCountAsync() => await _context.Products.CountAsync();
 
-        public async Task<Product> GetByIdAsync(int id) => await _context.Products.Include(m => m.ProductImages).
+        public async Task<Product> GetFullDataByIdAsync(int id) => await _context.Products.Include(m => m.ProductImages).
                                                                                    Include(m => m.ProductCategories).
                                                                                    ThenInclude(m=>m.Category).
                                                                                    Include(m => m.ProductTags).
