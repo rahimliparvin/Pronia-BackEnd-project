@@ -23,10 +23,12 @@ namespace ProniaBackEndProject.Services
 																						 ThenInclude(m => m.Size).
 																						 ToListAsync();
 
-        public async Task<List<Product>> GetPaginationDatas(int page, int take) => await _context.Products.Include(m => m.ProductImages).  
-                                                                                                           Skip((page * take) - take).  
-                                                                                                           Take(take).
-                                                                                                           ToListAsync();
+        public async Task<IEnumerable<Product>> GetPaginationDatas(int page, int take) => await _context.Products.Include(m => m.ProductImages).
+                                                                                                                  Include(m => m.ProductCategories).
+                                                                                                                  ThenInclude(m=>m.Category).
+                                                                                                                  Skip((page * take) - take).  
+                                                                                                                  Take(take).
+                                                                                                                  ToListAsync();
         public async Task<int> GetCountAsync() => await _context.Products.CountAsync();
 
         public async Task<Product> GetFullDataByIdAsync(int id) => await _context.Products.Include(m => m.ProductImages).
@@ -39,6 +41,11 @@ namespace ProniaBackEndProject.Services
                                                                                    Include(m=>m.ProductSizes).
                                                                                    ThenInclude(m => m.Size)?.
                                                                                    FirstOrDefaultAsync(m=>m.Id == id);
+
+
+
+
+
         
     }
 }

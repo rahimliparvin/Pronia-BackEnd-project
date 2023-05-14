@@ -1,7 +1,4 @@
-﻿
-@{
-    ViewData["Title"] = "Index";
-}
+﻿@model ContactVM
 
 <main class="main-content">
     <div class="breadcrumb-area breadcrumb-height"
@@ -13,7 +10,7 @@
                         <h2 class="breadcrumb-heading">Contact</h2>
                         <ul>
                             <li>
-                                <a asp-controller="Home" asp-action="Index">Home</a>
+                                <a href="index.html">Home</a>
                             </li>
                             <li>Contact Us</li>
                         </ul>
@@ -51,39 +48,45 @@
                         </div>
                         <form id="contact-form"
                               class="contact-form"
-                              action="https://whizthemes.com/mail-php/mamunur/pronia/pronia.php">
+                              asp-controller="Contact"
+                              asp-action="Create" method="post">
                             <div class="group-input">
                                 <div class="form-field me-lg-30 mb-35 mb-lg-0">
                                     <input type="text"
-                                           name="con_firstName"
+                                          
                                            placeholder="First Name*"
-                                           class="input-field" />
+                                           class="input-field"
+                                           asp-for="FirstName" />
                                 </div>
                                 <div class="form-field mb-35">
                                     <input type="text"
-                                           name="con_lastName"
+                                         
                                            placeholder="Last Name*"
-                                           class="input-field" />
+                                           class="input-field"
+                                           asp-for="LastName" />
                                 </div>
                             </div>
                             <div class="group-input mb-35">
                                 <div class="form-field me-lg-30 mb-35 mb-lg-0">
                                     <input type="text"
-                                           name="con_phone"
+                                         
                                            placeholder="Phone*"
-                                           class="input-field" />
+                                           class="input-field"
+                                           asp-for="Phone" />
                                 </div>
                                 <div class="form-field">
                                     <input type="text"
-                                           name="con_email"
+                                          
                                            placeholder="Email*"
-                                           class="input-field" />
+                                           class="input-field"
+                                           asp-for="Email" />
                                 </div>
                             </div>
                             <div class="form-field mb-5">
-                                <textarea name="con_message"
+                                <textarea 
                                           placeholder="Message"
-                                          class="textarea-field"></textarea>
+                                          class="textarea-field"
+                                          asp-for="Message"></textarea>
                             </div>
                             <div class="contact-button-wrap">
                                 <button type="submit"
@@ -108,4 +111,3 @@
         </div>
     </div>
 </main>
-

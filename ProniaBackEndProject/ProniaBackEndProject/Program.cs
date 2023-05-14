@@ -55,6 +55,7 @@ builder.Services.AddScoped<ISliderService, SliderService>();
 builder.Services.AddScoped<IAdvertisingService, AdvertisingService>();
 builder.Services.AddScoped<IClientService, ClientService>();
 builder.Services.AddScoped<IBrandService, BrandService>();
+builder.Services.AddScoped<IBannerService, BannerService>();
 builder.Services.AddScoped<IBlogService, BlogService>();
 builder.Services.AddScoped<IProductService, ProductService>();
 builder.Services.AddScoped<ICategoryService, CategoryService>();

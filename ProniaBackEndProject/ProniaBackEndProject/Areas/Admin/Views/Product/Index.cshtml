@@ -1,9 +1,10 @@
 ﻿@using ProniaBackEndProject.Areas.Admin.ViewModels.ProductVM;
-@model List<ProductIndexVM>
+@model Paginate<ProductIndexVM>
 
 
 @{
-    ViewData["Title"] = "Category";
+    ViewData["Title"] = "Product";
+    int count = (Model.CurrentPage - 1) * @ViewBag.take;
 }
 
 
@@ -20,7 +21,7 @@
                         <table class="table app-table-hover mb-0 text-left">
                             <thead>
                                 <tr>
-
+                                    <th>#</th>
                                     <th class="cell">Image</th>
                                     <th class="cell">Name</th>
                                     <th class="cell">CategoryName</th>
@@ -31,11 +32,15 @@
                             </thead>
                             <tbody>
 
-                                @foreach (var product in Model)
+                                @foreach (var product in Model.Datas)
                                 {
+                                    count++;
                                     <tr>
                                         <td class="cell">
-                                            <img style="width:70px;height:70px;" src="~/assets/images/website-images/@product.ProductImage">
+                                            @count
+                                        </td>
+                                        <td class="cell">
+                                            <img style="width:70px;height:70px;" src="~/assets/images/website-images/@product.MainImage">
                                         </td>
                                         <td class="cell">
                                             @product.Name
@@ -73,6 +78,25 @@
 
 
     </div><!--//tab-content-->
+
+    <nav aria-label="Page navigation example">
+        <ul class="pagination justify-content-center">
+            <li class="page-item @(Model.HasPrevious? "":"disabled")">
+
+                <a class="page-link" asp-action="Index" asp-route-page="@(Model.CurrentPage - 1)" tabindex="-1">Previous</a>
+            </li>
+
+            @for (int i = 1; i <= Model.TotalPages; i++)
+            {
+                <li class="page-item @(Model.CurrentPage == i ? "disabled":"")"><a class="page-link" asp-action="Index" asp-route-page="@i">@i</a></li>
+
+            }
+
+            <li class="page-item @(Model.HasNext? "":"disabled")">
+                <a class="page-link" asp-action="Index" asp-route-page="@(Model.CurrentPage + 1)">Next</a>
+            </li>
+        </ul>
+    </nav>
 
 </div>
 

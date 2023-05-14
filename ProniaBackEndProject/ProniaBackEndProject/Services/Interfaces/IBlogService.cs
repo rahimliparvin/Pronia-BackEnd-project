@@ -6,5 +6,7 @@ namespace ProniaBackEndProject.Services.Interfaces
     {
         Task<IEnumerable<Blog>> GetAllAsync();
         Task<Blog> GetFullDataByIdAsync(int id);
+        Task<int> GetCountAsync();
+        Task<IEnumerable<Blog>> GetPaginatedDatas(int page, int take);
     }
 }

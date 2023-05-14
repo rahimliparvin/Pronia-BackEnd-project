@@ -79,7 +79,7 @@ namespace ProniaBackEndProject.Areas.Admin.Controllers
 
                 string path = FileHelper.GetFilePath(_env.WebRootPath, "assets/images/website-images", fileName);
 
-                FileHelper.SaveFileAsync(path, slider.Photo);
+                await FileHelper.SaveFileAsync(path, slider.Photo);
 
 
 
@@ -107,7 +107,7 @@ namespace ProniaBackEndProject.Areas.Admin.Controllers
 
                 string pathBackGround = FileHelper.GetFilePath(_env.WebRootPath, "assets/images/website-images", fileBackGroundName);
 
-                FileHelper.SaveFileAsync(pathBackGround, slider.BackGroundPhoto);
+                await FileHelper.SaveFileAsync(pathBackGround, slider.BackGroundPhoto);
 
                 Slider newSlider = new()
                 {

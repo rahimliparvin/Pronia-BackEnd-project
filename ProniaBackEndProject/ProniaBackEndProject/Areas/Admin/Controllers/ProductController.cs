@@ -1,9 +1,12 @@
 ﻿using EntityFramework_Slider.Helpers;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
+using ProniaBackEndProject.Areas.Admin.ViewModels.BlogVM;
 using ProniaBackEndProject.Areas.Admin.ViewModels.ProductVM;
 using ProniaBackEndProject.Data;
+using ProniaBackEndProject.Helpers;
 using ProniaBackEndProject.Model;
+using ProniaBackEndProject.Services;
 using ProniaBackEndProject.Services.Interfaces;
 using System.Drawing;
 using System.Security.Policy;
@@ -40,28 +43,51 @@ namespace ProniaBackEndProject.Areas.Admin.Controllers
             _categoryService = categoryService;
         }
 
-        [HttpGet]
-        public async Task<IActionResult> Index()
-        {
-            IEnumerable<Product> products = await _productService.GetAllAsync();
 
+        public async Task<IActionResult> Index(int page = 1, int take = 5)
+        {
+            IEnumerable<Product> products = await _productService.GetPaginationDatas(page, take);
+
+            IEnumerable<ProductIndexVM> mappedDatas = GetMappedDatas(products);
+
+            int pageCount = await GetPageCountAsync(take);
+
+            Paginate<ProductIndexVM> paginatedDatas = new(mappedDatas, page, pageCount);
+
+            ViewBag.take = take;
+
+            return View(paginatedDatas);
+        }
+
+
+
+        private async Task<int> GetPageCountAsync(int take)
+        {
+            var productCount = await _productService.GetCountAsync();
+            return (int)Math.Ceiling((decimal)productCount / take);
+        }
+
+
+        private IEnumerable<ProductIndexVM> GetMappedDatas(IEnumerable<Product> products)
+        {
             List<ProductIndexVM> mappedDatas = new();
 
             foreach (var product in products)
             {
-                ProductIndexVM model = new()
+                ProductIndexVM prodcutVM = new()
                 {
                     Id = product.Id,
                     Name = product.Name,
                     Price = product.Price,
-                    ProductImage = product.ProductImages.Where(m=>m.IsMain).FirstOrDefault()?.Image,
-                    CategoryName = product.ProductCategories.Select(m=>m.Category).FirstOrDefault()?.Name
+                    CategoryName = product.ProductCategories.Select(m => m.Category)?.FirstOrDefault()?.Name,
+                    MainImage = product.ProductImages.Where(m => m.IsMain).FirstOrDefault()?.Image
                 };
-
-                mappedDatas.Add(model);
+                mappedDatas.Add(prodcutVM);
             }
-            return View(mappedDatas);
+
+            return mappedDatas;
         }
+
 
 
         [HttpGet]

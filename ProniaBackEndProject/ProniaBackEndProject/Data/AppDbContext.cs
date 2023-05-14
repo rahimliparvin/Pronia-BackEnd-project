@@ -27,7 +27,9 @@ namespace ProniaBackEndProject.Data
         public DbSet<ProductTag> ProductTags { get; set; }
         public DbSet<ProductImage> ProductImages { get; set; }
         public DbSet<Team> Teams { get; set; }
-
+        public DbSet<Settings> Settings { get; set; }
+        public DbSet<Banner> Banners { get; set; }
+        public DbSet<Contact> Contacts { get; set; }
 
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
