@@ -1,4 +1,5 @@
 ﻿using EntityFramework_Slider.Helpers;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using ProniaBackEndProject.Areas.Admin.ViewModels.BlogVM;
@@ -7,11 +8,13 @@ using ProniaBackEndProject.Helpers;
 using ProniaBackEndProject.Model;
 using ProniaBackEndProject.Services.Interfaces;
 using ProniaBackEndProject.ViewModels;
+using System.Data;
 using System.Text.RegularExpressions;
 using BlogDetailVM = ProniaBackEndProject.Areas.Admin.ViewModels.BlogVM.BlogAdminDetailVM;
 
 namespace ProniaBackEndProject.Areas.Admin.Controllers
 {
+    [Authorize(Roles = "Admin")]
     [Area("Admin")]
     public class BlogController : Controller
     {

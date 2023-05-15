@@ -1,4 +1,5 @@
 ﻿using EntityFramework_Slider.Helpers;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using ProniaBackEndProject.Areas.Admin.ViewModels.BlogVM;
@@ -8,6 +9,8 @@ using ProniaBackEndProject.Helpers;
 using ProniaBackEndProject.Model;
 using ProniaBackEndProject.Services;
 using ProniaBackEndProject.Services.Interfaces;
+using ProniaBackEndProject.ViewModels;
+using System.Data;
 using System.Drawing;
 using System.Security.Policy;
 using Color = ProniaBackEndProject.Model.Color;
@@ -15,6 +18,7 @@ using Size = ProniaBackEndProject.Model.Size;
 
 namespace ProniaBackEndProject.Areas.Admin.Controllers
 {
+    [Authorize(Roles = "Admin")]
     [Area("Admin")]
     public class ProductController : Controller
     {
@@ -464,6 +468,76 @@ namespace ProniaBackEndProject.Areas.Admin.Controllers
             return RedirectToAction(nameof(Index));
 
         }
+
+        [HttpGet]
+        public async Task<IActionResult> Detail(int? id)
+        {
+            if (id is null) return BadRequest();
+
+            Product product = await _productService.GetFullDataByIdAsync((int)id);
+            if (product is null) return NotFound();
+
+
+
+            List<string> images = new List<string>();
+
+            foreach (var image in product.ProductImages)
+            {
+                images.Add(image.Image);
+            }
+
+
+            List<string> tags = new List<string>();
+
+            foreach (var tag in product.ProductTags.Select(pt => pt.Tag))
+            {
+                tags.Add(tag.Name);
+            }
+
+
+            List<string> categories = new List<string>();
+
+            foreach (var category in product.ProductCategories.Select(pt => pt.Category))
+            {
+                categories.Add(category.Name);
+            }
+
+
+            List<string> sizes = new List<string>();
+
+            foreach (var size in product.ProductSizes.Select(pt => pt.Size))
+            {
+                sizes.Add(size.Name);
+            }
+
+            List<string> colors = new List<string>();
+
+            foreach (var color in product.ProductColors.Select(pt => pt.Color))
+            {
+                colors.Add(color.Name);
+            }
+
+            ProductDetailsVM model = new ProductDetailsVM
+            {
+                Name = product.Name,
+                Price = product.Price,
+                Description = product.Description,
+                SaleCount = product.SaleCount,
+                StockCount = product.StockCount,
+                SKU = product.Sku,
+                Rating = product.Rates,
+                Images = images,
+                Categories = categories,
+                Colors = colors,
+                Tags = tags,
+                Sizes = sizes,
+                CreatedAt = product.Created,
+                UpdatedAt = product.Updated
+            };
+
+            return View(model);
+        }
+
 
 
         public async Task<SelectList> GetCategoriesAsync()

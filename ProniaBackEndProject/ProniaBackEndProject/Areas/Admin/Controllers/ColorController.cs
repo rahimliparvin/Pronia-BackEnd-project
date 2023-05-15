@@ -1,13 +1,16 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using ProniaBackEndProject.Areas.Admin.ViewModels.CategoryVM;
 using ProniaBackEndProject.Areas.Admin.ViewModels.ColorVM;
 using ProniaBackEndProject.Data;
+using ProniaBackEndProject.Helpers;
 using ProniaBackEndProject.Model;
 using ProniaBackEndProject.Services.Interfaces;
 
 namespace ProniaBackEndProject.Areas.Admin.Controllers
 {
+    [Authorize(Roles = "Admin")]
     [Area("Admin")]
     public class ColorController : Controller
     {

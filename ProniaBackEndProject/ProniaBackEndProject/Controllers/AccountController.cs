@@ -4,10 +4,11 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using MimeKit;
 using MimeKit.Text;
+using ProniaBackEndProject.Helpers;
 using ProniaBackEndProject.Model;
 using ProniaBackEndProject.Services.Interfaces;
 using ProniaBackEndProject.ViewModels.Account;
-
+using System.Data;
 namespace ProniaBackEndProject.Controllers
 {
     public class AccountController : Controller
@@ -15,13 +16,16 @@ namespace ProniaBackEndProject.Controllers
         private readonly UserManager<AppUser> _userManager;
         private readonly SignInManager<AppUser> _signInManager;
         private readonly IEmailService _emailService;
+        private readonly RoleManager<IdentityRole> _roleManager;
         public AccountController(UserManager<AppUser> userManager,
                                  SignInManager<AppUser> signInManager,
+                                 RoleManager<IdentityRole> roleManager,
                                  IEmailService emailService)
         {
             _userManager = userManager;
             _signInManager = signInManager;
             _emailService = emailService;
+            _roleManager = roleManager;
         }
 
         [HttpGet]
@@ -62,14 +66,10 @@ namespace ProniaBackEndProject.Controllers
                 return View(model);
             }
 
+            await _userManager.AddToRoleAsync(newUser, Roles.Member.ToString());
 
             string token = await _userManager.GenerateEmailConfirmationTokenAsync(newUser);
 
-            //link yaradiriq.bu link email'a gondereceyimiz a taginin href'ine qoyacagiq.Email'dan a tag'ina click  edende bizim saytimiza gelsin deye !
-            //Bu linkin de bizim saytda gelmesi ucun asagidaki datalari bu linke qoyuruq !
-            //Request.Scheme - saytin http/https -ini bize verir !
-            //Request.Host.ToString() - Hostumuzu verir bize!
-            //Objectin icinde userId ve tokeni qoyuruq !
             string link = Url.Action(nameof(ConfirmEmail), "Account", new { userId = newUser.Id, token }, Request.Scheme, Request.Host.ToString());
 
             string subject = "Register Confirmation";
@@ -110,9 +110,6 @@ namespace ProniaBackEndProject.Controllers
         {
             return View();
         }
-
-
-
 
         [HttpGet]
         public IActionResult Login()
@@ -163,8 +160,95 @@ namespace ProniaBackEndProject.Controllers
             return RedirectToAction("Index", "Home");
         }
 
+ 
 
+        [HttpGet]
+        public IActionResult ForgotPassWord()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> ForgotPassWord(ForgotPasswordVM forgotPassword)
+        {
+
+            if (!ModelState.IsValid) return View();
+
+
+            AppUser existUser = await _userManager.FindByEmailAsync(forgotPassword.Email);
+
+            if (existUser == null)
+            {
+                ModelState.AddModelError("Email", "User not found");
+                return View();
+            }
+
+
+            string token = await _userManager.GeneratePasswordResetTokenAsync(existUser);
+
+            string link = Url.Action(nameof(ResetPassword), "Account", new { userId = existUser.Id, token },
+
+                Request.Scheme, Request.Host.ToString());
+
+
+
+            string html = string.Empty;
+
+            using (StreamReader reader = new StreamReader("wwwroot/templates/verify.html"))
+            {
+                html = reader.ReadToEnd();
+            }
+            string subject = "Verify Password Reset Email";
+
+            html = html.Replace("{{link}}", link);
+            html = html.Replace("{{headerText}}", existUser.FirstName);
+
+            _emailService.Send(existUser.Email, subject, html);
+
+
+            return RedirectToAction(nameof(VerifyEmail));
+        }
+
+
+
+        [HttpGet]
+        public IActionResult ResetPassword(string UserId, string token)
+        {
+
+            return View(new ResetPasswordVM { Token = token, UserId = UserId });
+        }
+
+        [HttpGet]
+        public async Task<IActionResult> ConfirmResetPassword(ResetPasswordVM resetPassword)
+        {
+
+            if (!ModelState.IsValid) return View(resetPassword);
+
+            AppUser existUser = await _userManager.FindByIdAsync(resetPassword.UserId);
+
+            if (existUser == null) return NotFound();
+
+            await _userManager.ResetPasswordAsync(existUser, resetPassword.Token, resetPassword.Password);
+
+
+
+            return RedirectToAction(nameof(Login));
+        }
+
+
+        public async Task CreateRole()
+        {
+            foreach (var role in Enum.GetValues(typeof(Roles)))
+            {
+
+                if (!await _roleManager.RoleExistsAsync(role.ToString()))
+                {
+                    await _roleManager.CreateAsync(new IdentityRole { Name = role.ToString() });
+                }
+
+
+            }
+        }
     }
-
-
 }

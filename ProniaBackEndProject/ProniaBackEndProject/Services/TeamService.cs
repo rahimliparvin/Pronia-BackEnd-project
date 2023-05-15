@@ -13,6 +13,8 @@ namespace ProniaBackEndProject.Services
             _context = context;
         }
         public async Task<IEnumerable<Team>> GetAllAsync() => await _context.Teams.ToListAsync();
+
+        public async Task<Team> GetByIdAsync(int id) => await _context.Teams.FindAsync(id);
         
     }
 }

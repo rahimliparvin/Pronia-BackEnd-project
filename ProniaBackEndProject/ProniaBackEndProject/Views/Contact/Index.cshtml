@@ -49,44 +49,35 @@
                         <form id="contact-form"
                               class="contact-form"
                               asp-controller="Contact"
-                              asp-action="Create" method="post">
+                              asp-action="Index" method="post">
                             <div class="group-input">
                                 <div class="form-field me-lg-30 mb-35 mb-lg-0">
-                                    <input type="text"
-                                          
-                                           placeholder="First Name*"
-                                           class="input-field"
-                                           asp-for="FirstName" />
+                                    <input type="text" placeholder="First Name*" class="input-field"  asp-for="FirstName" />
+                                    <span class="text-danger" asp-validation-for="FirstName"></span>
                                 </div>
                                 <div class="form-field mb-35">
-                                    <input type="text"
-                                         
-                                           placeholder="Last Name*"
-                                           class="input-field"
-                                           asp-for="LastName" />
+                                    <input type="text" placeholder="Last Name*" class="input-field" asp-for="LastName" />
+                                    <span class="text-danger" asp-validation-for="LastName"></span>
                                 </div>
                             </div>
                             <div class="group-input mb-35">
                                 <div class="form-field me-lg-30 mb-35 mb-lg-0">
-                                    <input type="text"
-                                         
-                                           placeholder="Phone*"
-                                           class="input-field"
-                                           asp-for="Phone" />
+                                    <input type="text" placeholder="Phone*" class="input-field" asp-for="Phone" />
+                                    <span class="text-danger" asp-validation-for="Phone"></span>
                                 </div>
                                 <div class="form-field">
                                     <input type="text"
-                                          
                                            placeholder="Email*"
                                            class="input-field"
                                            asp-for="Email" />
+                                    <span class="text-danger" asp-validation-for="Email"></span>
                                 </div>
                             </div>
                             <div class="form-field mb-5">
-                                <textarea 
-                                          placeholder="Message"
+                                <textarea placeholder="Message"
                                           class="textarea-field"
                                           asp-for="Message"></textarea>
+                                <span class="text-danger" asp-validation-for="Message"></span>
                             </div>
                             <div class="contact-button-wrap">
                                 <button type="submit"

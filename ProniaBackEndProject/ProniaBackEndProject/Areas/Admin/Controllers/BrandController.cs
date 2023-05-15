@@ -1,12 +1,15 @@
 ﻿using EntityFramework_Slider.Helpers;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using ProniaBackEndProject.Areas.Admin.ViewModels.BrandVM;
 using ProniaBackEndProject.Data;
+using ProniaBackEndProject.Helpers;
 using ProniaBackEndProject.Model;
 using ProniaBackEndProject.Services.Interfaces;
 
 namespace ProniaBackEndProject.Areas.Admin.Controllers
 {
+    [Authorize(Roles = "Admin")]
     [Area("Admin")]
     public class BrandController : Controller
     {

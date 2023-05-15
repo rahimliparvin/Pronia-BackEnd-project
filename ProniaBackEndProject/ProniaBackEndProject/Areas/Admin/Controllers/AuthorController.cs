@@ -1,14 +1,17 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using ProniaBackEndProject.Areas.Admin.ViewModels.AuthorVM;
 using ProniaBackEndProject.Areas.Admin.ViewModels.CategoryVM;
 using ProniaBackEndProject.Data;
+using ProniaBackEndProject.Helpers;
 using ProniaBackEndProject.Model;
 using ProniaBackEndProject.Services.Interfaces;
 
 namespace ProniaBackEndProject.Areas.Admin.Controllers
 {
-	[Area("Admin")]
+    [Authorize(Roles = "Admin")]
+    [Area("Admin")]
 	public class AuthorController : Controller
     {
         private readonly IWebHostEnvironment _env;

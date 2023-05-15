@@ -1,8 +1,10 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using ProniaBackEndProject.Areas.Admin.ViewModels;
 using ProniaBackEndProject.Areas.Admin.ViewModels.CategoryVM;
 using ProniaBackEndProject.Data;
+using ProniaBackEndProject.Helpers;
 using ProniaBackEndProject.Model;
 using ProniaBackEndProject.Services;
 using ProniaBackEndProject.Services.Interfaces;
@@ -10,7 +12,8 @@ using System.Net;
 
 namespace ProniaBackEndProject.Areas.Admin.Controllers
 {
-	[Area("Admin")]
+    [Authorize(Roles = "Admin")]
+    [Area("Admin")]
 	public class CategoryController : Controller
 	{
 		private readonly IWebHostEnvironment _env;

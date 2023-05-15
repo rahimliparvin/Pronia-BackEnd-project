@@ -14,7 +14,8 @@ namespace ProniaBackEndProject.Controllers
         {
             _context = context;
         }
-        
+
+        [HttpGet]
         public ActionResult Index()
         {
             ContactVM model = new();
@@ -24,11 +25,12 @@ namespace ProniaBackEndProject.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create(ContactVM model)
+        public async Task<IActionResult> Index(ContactVM model)
         {
             if(!ModelState.IsValid)
             {
                 return View(model);
+              
             }
 
             Contact contact = new()
@@ -43,6 +45,8 @@ namespace ProniaBackEndProject.Controllers
 
             await _context.Contacts.AddAsync(contact);
             await _context.SaveChangesAsync();
+
+
 
             return RedirectToAction(nameof(Index));
 
